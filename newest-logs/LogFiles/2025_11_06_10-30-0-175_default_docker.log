@@ -1,0 +1,629 @@
+2025-11-06T20:03:23.223099877Z    _____                               
+2025-11-06T20:03:23.223141795Z   /  _  \ __________ _________   ____  
+2025-11-06T20:03:23.223147034Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-11-06T20:03:23.223151273Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-11-06T20:03:23.223155540Z \____|__  /_____ \____/ |__|    \___  >
+2025-11-06T20:03:23.223159568Z         \/      \/                  \/ 
+2025-11-06T20:03:23.223163816Z A P P   S E R V I C E   O N   L I N U X
+2025-11-06T20:03:23.223167382Z 
+2025-11-06T20:03:23.223171129Z Documentation    : http://aka.ms/webapp-linux
+2025-11-06T20:03:23.223174536Z Python quickstart: https://aka.ms/python-qs
+2025-11-06T20:03:23.223178012Z Python version   : 3.10.19
+2025-11-06T20:03:23.223181258Z Instance Name    : 10-30-0-175
+2025-11-06T20:03:23.223184915Z Instance Id      : 8b0ed3a3c940bdd1ba4f195fc5a5d840c1c4311a825c69e6ceb63aace03ae840
+2025-11-06T20:03:23.223189003Z 
+2025-11-06T20:03:23.223192399Z Note: Any data outside '/home' is not persisted
+2025-11-06T20:03:24.026835031Z Starting OpenBSD Secure Shell server: sshd.
+2025-11-06T20:03:24.071657004Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-11-06T20:03:24.130178577Z Updating certificates in /etc/ssl/certs...
+2025-11-06T20:03:30.958045924Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2025-11-06T20:03:30.964991168Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2025-11-06T20:03:30.967022834Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_E46.pem
+2025-11-06T20:03:30.970141262Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_R46.pem
+2025-11-06T20:03:30.983919666Z 4 added, 0 removed; done.
+2025-11-06T20:03:30.983943330Z Running hooks in /etc/ca-certificates/update.d...
+2025-11-06T20:03:30.996083104Z done.
+2025-11-06T20:03:31.015690180Z CA certificates copied and updated successfully.
+2025-11-06T20:03:31.091973128Z App Command Line not configured, will attempt auto-detect
+2025-11-06T20:03:31.091999447Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2025-11-06T20:03:31.214921246Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-11-06T20:03:31.217715483Z Build Operation ID: 0a05100424a00119
+2025-11-06T20:03:31.222038618Z Output is compressed. Extracting it...
+2025-11-06T20:03:31.222330502Z Oryx Version: 0.2.20251017.2, Commit: 482d4c55e818733ab33b9d2131f9dc485a21fd03, ReleaseTagName: 20251017.2
+2025-11-06T20:03:31.224908005Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de1d6f06269b76'...
+2025-11-06T20:03:33.189154086Z App path is set to '/tmp/8de1d6f06269b76'
+2025-11-06T20:03:33.777218892Z Detected an app based on Flask
+2025-11-06T20:03:33.794736372Z Generating `gunicorn` command for 'application:app'
+2025-11-06T20:03:33.812973795Z Writing output script to '/opt/startup/startup.sh'
+2025-11-06T20:03:33.910980090Z Using packages from virtual environment antenv located at /tmp/8de1d6f06269b76/antenv.
+2025-11-06T20:03:33.911042396Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages'
+2025-11-06T20:03:34.432085970Z [2025-11-06 20:03:34 +0000] [2093] [INFO] Starting gunicorn 23.0.0
+2025-11-06T20:03:34.450979940Z [2025-11-06 20:03:34 +0000] [2093] [INFO] Listening at: http://0.0.0.0:8000 (2093)
+2025-11-06T20:03:34.451210610Z [2025-11-06 20:03:34 +0000] [2093] [INFO] Using worker: sync
+2025-11-06T20:03:34.454666787Z [2025-11-06 20:03:34 +0000] [2096] [INFO] Booting worker with pid: 2096
+2025-11-06T20:03:36.239155771Z [2025-11-06 20:03:36,238] INFO in __init__: Flask Web Project startup
+2025-11-06T20:03:36.268142700Z [2025-11-06 20:03:36 +0000] [2096] [ERROR] Exception in worker process
+2025-11-06T20:03:36.268171123Z Traceback (most recent call last):
+2025-11-06T20:03:36.268177434Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+2025-11-06T20:03:36.268183866Z     worker.init_process()
+2025-11-06T20:03:36.268189267Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+2025-11-06T20:03:36.268194747Z     self.load_wsgi()
+2025-11-06T20:03:36.268200107Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+2025-11-06T20:03:36.268206088Z     self.wsgi = self.app.wsgi()
+2025-11-06T20:03:36.268211568Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+2025-11-06T20:03:36.268217139Z     self.callable = self.load()
+2025-11-06T20:03:36.268222448Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+2025-11-06T20:03:36.268228279Z     return self.load_wsgiapp()
+2025-11-06T20:03:36.268233579Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+2025-11-06T20:03:36.268239310Z     return util.import_app(self.app_uri)
+2025-11-06T20:03:36.268244590Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+2025-11-06T20:03:36.268250050Z     mod = importlib.import_module(module)
+2025-11-06T20:03:36.268255390Z   File "/opt/python/3.10.19/lib/python3.10/importlib/__init__.py", line 126, in import_module
+2025-11-06T20:03:36.268260629Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-11-06T20:03:36.272759092Z   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+2025-11-06T20:03:36.272788537Z   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+2025-11-06T20:03:36.272793516Z   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+2025-11-06T20:03:36.272797523Z   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+2025-11-06T20:03:36.272801270Z   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+2025-11-06T20:03:36.272805148Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-11-06T20:03:36.272877412Z   File "/tmp/8de1d6f06269b76/application.py", line 6, in <module>
+2025-11-06T20:03:36.272882101Z     from FlaskWebProject import app
+2025-11-06T20:03:36.272885658Z   File "/tmp/8de1d6f06269b76/FlaskWebProject/__init__.py", line 37, in <module>
+2025-11-06T20:03:36.272889515Z     db = SQLAlchemy(app)
+2025-11-06T20:03:36.272892921Z   File "/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 758, in __init__
+2025-11-06T20:03:36.272896618Z     _include_sqlalchemy(self, query_class)
+2025-11-06T20:03:36.272902389Z   File "/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 112, in _include_sqlalchemy
+2025-11-06T20:03:36.272906236Z     for key in module.__all__:
+2025-11-06T20:03:36.272909772Z AttributeError: module 'sqlalchemy' has no attribute '__all__'
+2025-11-06T20:03:36.272913369Z [2025-11-06 20:03:36 +0000] [2096] [INFO] Worker exiting (pid: 2096)
+2025-11-06T20:03:36.269083155Z here is config: cmsimages
+2025-11-06T20:03:36.385126479Z [2025-11-06 20:03:36 +0000] [2093] [ERROR] Worker (pid:2096) exited with code 3
+2025-11-06T20:03:36.385631640Z [2025-11-06 20:03:36 +0000] [2093] [ERROR] Shutting down: Master
+2025-11-06T20:03:36.385640066Z [2025-11-06 20:03:36 +0000] [2093] [ERROR] Reason: Worker failed to boot.
+
+2025-11-06T20:03:49.458192255Z    _____                               
+2025-11-06T20:03:49.458244173Z   /  _  \ __________ _________   ____  
+2025-11-06T20:03:49.458249773Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-11-06T20:03:49.458254822Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-11-06T20:03:49.458258600Z \____|__  /_____ \____/ |__|    \___  >
+2025-11-06T20:03:49.458262908Z         \/      \/                  \/ 
+2025-11-06T20:03:49.458266735Z A P P   S E R V I C E   O N   L I N U X
+2025-11-06T20:03:49.458270131Z 
+2025-11-06T20:03:49.458273678Z Documentation    : http://aka.ms/webapp-linux
+2025-11-06T20:03:49.458277224Z Python quickstart: https://aka.ms/python-qs
+2025-11-06T20:03:49.458280711Z Python version   : 3.10.19
+2025-11-06T20:03:49.458284278Z Instance Name    : 10-30-0-175
+2025-11-06T20:03:49.458287935Z Instance Id      : 8b0ed3a3c940bdd1ba4f195fc5a5d840c1c4311a825c69e6ceb63aace03ae840
+2025-11-06T20:03:49.458291491Z 
+2025-11-06T20:03:49.458294958Z Note: Any data outside '/home' is not persisted
+2025-11-06T20:03:49.848117350Z Starting OpenBSD Secure Shell server: sshd.
+2025-11-06T20:03:49.864393113Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-11-06T20:03:49.910093905Z Updating certificates in /etc/ssl/certs...
+2025-11-06T20:03:56.516961245Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2025-11-06T20:03:56.534896640Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2025-11-06T20:03:56.558563433Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_E46.pem
+2025-11-06T20:03:56.571849009Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_R46.pem
+2025-11-06T20:03:56.593555630Z 4 added, 0 removed; done.
+2025-11-06T20:03:56.595944018Z Running hooks in /etc/ca-certificates/update.d...
+2025-11-06T20:03:56.607818781Z done.
+2025-11-06T20:03:56.629910323Z CA certificates copied and updated successfully.
+2025-11-06T20:03:56.698021353Z App Command Line not configured, will attempt auto-detect
+2025-11-06T20:03:56.699871566Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2025-11-06T20:03:56.728757341Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-11-06T20:03:56.740267695Z Build Operation ID: 0a05100424a00119
+2025-11-06T20:03:56.752261571Z Oryx Version: 0.2.20251017.2, Commit: 482d4c55e818733ab33b9d2131f9dc485a21fd03, ReleaseTagName: 20251017.2
+2025-11-06T20:03:56.752668481Z Output is compressed. Extracting it...
+2025-11-06T20:03:56.754760626Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de1d6f06269b76'...
+2025-11-06T20:03:58.271479326Z App path is set to '/tmp/8de1d6f06269b76'
+2025-11-06T20:03:58.387999006Z Detected an app based on Flask
+2025-11-06T20:03:58.405376380Z Generating `gunicorn` command for 'application:app'
+2025-11-06T20:03:58.425009768Z Writing output script to '/opt/startup/startup.sh'
+2025-11-06T20:03:58.496169011Z Using packages from virtual environment antenv located at /tmp/8de1d6f06269b76/antenv.
+2025-11-06T20:03:58.496743283Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages'
+2025-11-06T20:03:58.843589557Z [2025-11-06 20:03:58 +0000] [2093] [INFO] Starting gunicorn 23.0.0
+2025-11-06T20:03:58.864487834Z [2025-11-06 20:03:58 +0000] [2093] [INFO] Listening at: http://0.0.0.0:8000 (2093)
+2025-11-06T20:03:58.866647212Z [2025-11-06 20:03:58 +0000] [2093] [INFO] Using worker: sync
+2025-11-06T20:03:58.868190202Z [2025-11-06 20:03:58 +0000] [2096] [INFO] Booting worker with pid: 2096
+2025-11-06T20:03:59.956095322Z [2025-11-06 20:03:59,955] INFO in __init__: Flask Web Project startup
+2025-11-06T20:03:59.978458980Z here is config: cmsimages
+2025-11-06T20:03:59.979035166Z [2025-11-06 20:03:59 +0000] [2096] [ERROR] Exception in worker process
+2025-11-06T20:03:59.979156602Z Traceback (most recent call last):
+2025-11-06T20:03:59.979167052Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+2025-11-06T20:03:59.979536391Z     worker.init_process()
+2025-11-06T20:03:59.979546170Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+2025-11-06T20:03:59.979552582Z     self.load_wsgi()
+2025-11-06T20:03:59.979557881Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+2025-11-06T20:03:59.979563432Z     self.wsgi = self.app.wsgi()
+2025-11-06T20:03:59.979568591Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+2025-11-06T20:03:59.980271052Z     self.callable = self.load()
+2025-11-06T20:03:59.980281752Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+2025-11-06T20:03:59.980287373Z     return self.load_wsgiapp()
+2025-11-06T20:03:59.980292523Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+2025-11-06T20:03:59.980311538Z     return util.import_app(self.app_uri)
+2025-11-06T20:03:59.980532520Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+2025-11-06T20:03:59.980541127Z     mod = importlib.import_module(module)
+2025-11-06T20:03:59.980546437Z   File "/opt/python/3.10.19/lib/python3.10/importlib/__init__.py", line 126, in import_module
+2025-11-06T20:03:59.980551977Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-11-06T20:03:59.980557337Z   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+2025-11-06T20:03:59.981134364Z   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+2025-11-06T20:03:59.981144653Z   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+2025-11-06T20:03:59.981149362Z   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+2025-11-06T20:03:59.981153379Z   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+2025-11-06T20:03:59.981157277Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-11-06T20:03:59.981160743Z   File "/tmp/8de1d6f06269b76/application.py", line 6, in <module>
+2025-11-06T20:03:59.981164159Z     from FlaskWebProject import app
+2025-11-06T20:03:59.981167436Z   File "/tmp/8de1d6f06269b76/FlaskWebProject/__init__.py", line 37, in <module>
+2025-11-06T20:03:59.981171112Z     db = SQLAlchemy(app)
+2025-11-06T20:03:59.981174329Z   File "/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 758, in __init__
+2025-11-06T20:03:59.981177865Z     _include_sqlalchemy(self, query_class)
+2025-11-06T20:03:59.981183616Z   File "/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 112, in _include_sqlalchemy
+2025-11-06T20:03:59.981187363Z     for key in module.__all__:
+2025-11-06T20:03:59.981190739Z AttributeError: module 'sqlalchemy' has no attribute '__all__'
+2025-11-06T20:03:59.981194216Z [2025-11-06 20:03:59 +0000] [2096] [INFO] Worker exiting (pid: 2096)
+2025-11-06T20:04:00.123229144Z [2025-11-06 20:04:00 +0000] [2093] [ERROR] Worker (pid:2096) exited with code 3
+2025-11-06T20:04:00.123256004Z [2025-11-06 20:04:00 +0000] [2093] [ERROR] Shutting down: Master
+2025-11-06T20:04:00.123259791Z [2025-11-06 20:04:00 +0000] [2093] [ERROR] Reason: Worker failed to boot.
+
+2025-11-06T20:04:16.821429555Z    _____                               
+2025-11-06T20:04:16.821471483Z   /  _  \ __________ _________   ____  
+2025-11-06T20:04:16.821477193Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-11-06T20:04:16.821481922Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-11-06T20:04:16.821485869Z \____|__  /_____ \____/ |__|    \___  >
+2025-11-06T20:04:16.821489827Z         \/      \/                  \/ 
+2025-11-06T20:04:16.821493944Z A P P   S E R V I C E   O N   L I N U X
+2025-11-06T20:04:16.821497962Z 
+2025-11-06T20:04:16.821501939Z Documentation    : http://aka.ms/webapp-linux
+2025-11-06T20:04:16.821505916Z Python quickstart: https://aka.ms/python-qs
+2025-11-06T20:04:16.821509523Z Python version   : 3.10.19
+2025-11-06T20:04:16.821513310Z Instance Name    : 10-30-0-175
+2025-11-06T20:04:16.821516917Z Instance Id      : 8b0ed3a3c940bdd1ba4f195fc5a5d840c1c4311a825c69e6ceb63aace03ae840
+2025-11-06T20:04:16.821520915Z 
+2025-11-06T20:04:16.821524561Z Note: Any data outside '/home' is not persisted
+2025-11-06T20:04:17.583970220Z Starting OpenBSD Secure Shell server: sshd.
+2025-11-06T20:04:17.603665096Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-11-06T20:04:17.672248261Z Updating certificates in /etc/ssl/certs...
+2025-11-06T20:04:27.213130404Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2025-11-06T20:04:27.217336267Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2025-11-06T20:04:27.233169850Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_E46.pem
+2025-11-06T20:04:27.239600103Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_R46.pem
+2025-11-06T20:04:27.265413097Z 4 added, 0 removed; done.
+2025-11-06T20:04:27.265437402Z Running hooks in /etc/ca-certificates/update.d...
+2025-11-06T20:04:27.273976579Z done.
+2025-11-06T20:04:27.288555328Z CA certificates copied and updated successfully.
+2025-11-06T20:04:27.354481587Z App Command Line not configured, will attempt auto-detect
+2025-11-06T20:04:27.354545586Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2025-11-06T20:04:27.457577385Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-11-06T20:04:27.462521247Z Build Operation ID: 0a05100424a00119
+2025-11-06T20:04:27.464530046Z Output is compressed. Extracting it...
+2025-11-06T20:04:27.464672510Z Oryx Version: 0.2.20251017.2, Commit: 482d4c55e818733ab33b9d2131f9dc485a21fd03, ReleaseTagName: 20251017.2
+2025-11-06T20:04:27.466504421Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de1d6f06269b76'...
+2025-11-06T20:04:29.584465298Z App path is set to '/tmp/8de1d6f06269b76'
+2025-11-06T20:04:29.892335191Z Detected an app based on Flask
+2025-11-06T20:04:29.914964631Z Generating `gunicorn` command for 'application:app'
+2025-11-06T20:04:29.929885592Z Writing output script to '/opt/startup/startup.sh'
+2025-11-06T20:04:30.322594857Z Using packages from virtual environment antenv located at /tmp/8de1d6f06269b76/antenv.
+2025-11-06T20:04:30.322635803Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages'
+2025-11-06T20:04:31.187590511Z [2025-11-06 20:04:31 +0000] [2097] [INFO] Starting gunicorn 23.0.0
+2025-11-06T20:04:31.217189450Z [2025-11-06 20:04:31 +0000] [2097] [INFO] Listening at: http://0.0.0.0:8000 (2097)
+2025-11-06T20:04:31.218161833Z [2025-11-06 20:04:31 +0000] [2097] [INFO] Using worker: sync
+2025-11-06T20:04:31.224940050Z [2025-11-06 20:04:31 +0000] [2100] [INFO] Booting worker with pid: 2100
+2025-11-06T20:04:33.560184243Z [2025-11-06 20:04:33,559] INFO in __init__: Flask Web Project startup
+2025-11-06T20:04:33.609897322Z [2025-11-06 20:04:33 +0000] [2100] [ERROR] Exception in worker process
+2025-11-06T20:04:33.609920074Z Traceback (most recent call last):
+2025-11-06T20:04:33.609926035Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+2025-11-06T20:04:33.609931915Z     worker.init_process()
+2025-11-06T20:04:33.609937265Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+2025-11-06T20:04:33.609942866Z     self.load_wsgi()
+2025-11-06T20:04:33.609948606Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+2025-11-06T20:04:33.609954557Z     self.wsgi = self.app.wsgi()
+2025-11-06T20:04:33.609960128Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+2025-11-06T20:04:33.609967561Z     self.callable = self.load()
+2025-11-06T20:04:33.609972951Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+2025-11-06T20:04:33.609978592Z     return self.load_wsgiapp()
+2025-11-06T20:04:33.609984192Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+2025-11-06T20:04:33.609989502Z     return util.import_app(self.app_uri)
+2025-11-06T20:04:33.609994351Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+2025-11-06T20:04:33.609999961Z     mod = importlib.import_module(module)
+2025-11-06T20:04:33.610005161Z   File "/opt/python/3.10.19/lib/python3.10/importlib/__init__.py", line 126, in import_module
+2025-11-06T20:04:33.610010621Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-11-06T20:04:33.610015821Z   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+2025-11-06T20:04:33.610030738Z   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+2025-11-06T20:04:33.610035407Z   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+2025-11-06T20:04:33.610039485Z   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+2025-11-06T20:04:33.610043362Z   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+2025-11-06T20:04:33.610047189Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-11-06T20:04:33.610051367Z   File "/tmp/8de1d6f06269b76/application.py", line 6, in <module>
+2025-11-06T20:04:33.610055254Z     from FlaskWebProject import app
+2025-11-06T20:04:33.610059021Z   File "/tmp/8de1d6f06269b76/FlaskWebProject/__init__.py", line 37, in <module>
+2025-11-06T20:04:33.610063149Z     db = SQLAlchemy(app)
+2025-11-06T20:04:33.610067176Z   File "/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 758, in __init__
+2025-11-06T20:04:33.610071193Z     _include_sqlalchemy(self, query_class)
+2025-11-06T20:04:33.610075962Z   File "/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 112, in _include_sqlalchemy
+2025-11-06T20:04:33.610080260Z     for key in module.__all__:
+2025-11-06T20:04:33.610083747Z AttributeError: module 'sqlalchemy' has no attribute '__all__'
+2025-11-06T20:04:33.621083679Z here is config: cmsimages
+2025-11-06T20:04:33.621173896Z [2025-11-06 20:04:33 +0000] [2100] [INFO] Worker exiting (pid: 2100)
+2025-11-06T20:04:33.750309074Z [2025-11-06 20:04:33 +0000] [2097] [ERROR] Worker (pid:2100) exited with code 3
+2025-11-06T20:04:33.751238284Z [2025-11-06 20:04:33 +0000] [2097] [ERROR] Shutting down: Master
+2025-11-06T20:04:33.754064155Z [2025-11-06 20:04:33 +0000] [2097] [ERROR] Reason: Worker failed to boot.
+
+2025-11-06T20:04:49.986618196Z    _____                               
+2025-11-06T20:04:49.986662438Z   /  _  \ __________ _________   ____  
+2025-11-06T20:04:49.986668550Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-11-06T20:04:49.986673248Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-11-06T20:04:49.986676685Z \____|__  /_____ \____/ |__|    \___  >
+2025-11-06T20:04:49.986679420Z         \/      \/                  \/ 
+2025-11-06T20:04:49.986682015Z A P P   S E R V I C E   O N   L I N U X
+2025-11-06T20:04:49.986684449Z 
+2025-11-06T20:04:49.986687084Z Documentation    : http://aka.ms/webapp-linux
+2025-11-06T20:04:49.986689529Z Python quickstart: https://aka.ms/python-qs
+2025-11-06T20:04:49.986691883Z Python version   : 3.10.19
+2025-11-06T20:04:49.986694167Z Instance Name    : 10-30-0-175
+2025-11-06T20:04:49.986696592Z Instance Id      : 8b0ed3a3c940bdd1ba4f195fc5a5d840c1c4311a825c69e6ceb63aace03ae840
+2025-11-06T20:04:49.986699006Z 
+2025-11-06T20:04:49.986701341Z Note: Any data outside '/home' is not persisted
+2025-11-06T20:04:50.642159965Z Starting OpenBSD Secure Shell server: sshd.
+2025-11-06T20:04:50.652394265Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-11-06T20:04:50.699194143Z Updating certificates in /etc/ssl/certs...
+2025-11-06T20:05:04.756498007Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2025-11-06T20:05:04.756532140Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2025-11-06T20:05:04.759169221Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_E46.pem
+2025-11-06T20:05:04.759990307Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_R46.pem
+2025-11-06T20:05:04.771170345Z 4 added, 0 removed; done.
+2025-11-06T20:05:04.772586608Z Running hooks in /etc/ca-certificates/update.d...
+2025-11-06T20:05:04.775604093Z done.
+2025-11-06T20:05:04.786869562Z CA certificates copied and updated successfully.
+2025-11-06T20:05:04.830654093Z App Command Line not configured, will attempt auto-detect
+2025-11-06T20:05:04.832201339Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2025-11-06T20:05:04.845959488Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-11-06T20:05:04.848944325Z Build Operation ID: 0a05100424a00119
+2025-11-06T20:05:04.851086617Z Oryx Version: 0.2.20251017.2, Commit: 482d4c55e818733ab33b9d2131f9dc485a21fd03, ReleaseTagName: 20251017.2
+2025-11-06T20:05:04.851203444Z Output is compressed. Extracting it...
+2025-11-06T20:05:04.852422860Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de1d6f06269b76'...
+2025-11-06T20:05:06.643256143Z App path is set to '/tmp/8de1d6f06269b76'
+2025-11-06T20:05:06.778528994Z Detected an app based on Flask
+2025-11-06T20:05:06.796962123Z Generating `gunicorn` command for 'application:app'
+2025-11-06T20:05:06.814753195Z Writing output script to '/opt/startup/startup.sh'
+2025-11-06T20:05:07.336189993Z Using packages from virtual environment antenv located at /tmp/8de1d6f06269b76/antenv.
+2025-11-06T20:05:07.336213687Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages'
+2025-11-06T20:05:09.018506972Z [2025-11-06 20:05:09 +0000] [2098] [INFO] Starting gunicorn 23.0.0
+2025-11-06T20:05:09.037508679Z [2025-11-06 20:05:09 +0000] [2098] [INFO] Listening at: http://0.0.0.0:8000 (2098)
+2025-11-06T20:05:09.037531862Z [2025-11-06 20:05:09 +0000] [2098] [INFO] Using worker: sync
+2025-11-06T20:05:09.042250181Z [2025-11-06 20:05:09 +0000] [2101] [INFO] Booting worker with pid: 2101
+2025-11-06T20:05:11.644978963Z [2025-11-06 20:05:11,640] INFO in __init__: Flask Web Project startup
+2025-11-06T20:05:11.673945815Z [2025-11-06 20:05:11 +0000] [2101] [ERROR] Exception in worker process
+2025-11-06T20:05:11.676930501Z Traceback (most recent call last):
+2025-11-06T20:05:11.677049693Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+2025-11-06T20:05:11.677058179Z     worker.init_process()
+2025-11-06T20:05:11.677063518Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+2025-11-06T20:05:11.677068939Z     self.load_wsgi()
+2025-11-06T20:05:11.677073768Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+2025-11-06T20:05:11.677081241Z     self.wsgi = self.app.wsgi()
+2025-11-06T20:05:11.677086040Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+2025-11-06T20:05:11.677090969Z     self.callable = self.load()
+2025-11-06T20:05:11.677095748Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+2025-11-06T20:05:11.677100748Z     return self.load_wsgiapp()
+2025-11-06T20:05:11.677105536Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+2025-11-06T20:05:11.677110606Z     return util.import_app(self.app_uri)
+2025-11-06T20:05:11.677116267Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+2025-11-06T20:05:11.677121596Z     mod = importlib.import_module(module)
+2025-11-06T20:05:11.677126566Z   File "/opt/python/3.10.19/lib/python3.10/importlib/__init__.py", line 126, in import_module
+2025-11-06T20:05:11.677131695Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-11-06T20:05:11.677136694Z   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+2025-11-06T20:05:11.677154828Z   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+2025-11-06T20:05:11.677159056Z   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+2025-11-06T20:05:11.677163184Z   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+2025-11-06T20:05:11.677167061Z   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+2025-11-06T20:05:11.677171309Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-11-06T20:05:11.677175286Z   File "/tmp/8de1d6f06269b76/application.py", line 6, in <module>
+2025-11-06T20:05:11.677179073Z     from FlaskWebProject import app
+2025-11-06T20:05:11.677183241Z   File "/tmp/8de1d6f06269b76/FlaskWebProject/__init__.py", line 37, in <module>
+2025-11-06T20:05:11.677188000Z     db = SQLAlchemy(app)
+2025-11-06T20:05:11.677281634Z   File "/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 758, in __init__
+2025-11-06T20:05:11.677288557Z     _include_sqlalchemy(self, query_class)
+2025-11-06T20:05:11.677295910Z   File "/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 112, in _include_sqlalchemy
+2025-11-06T20:05:11.677299838Z     for key in module.__all__:
+2025-11-06T20:05:11.677303394Z AttributeError: module 'sqlalchemy' has no attribute '__all__'
+2025-11-06T20:05:11.677307342Z [2025-11-06 20:05:11 +0000] [2101] [INFO] Worker exiting (pid: 2101)
+2025-11-06T20:05:11.692021030Z here is config: cmsimages
+2025-11-06T20:05:11.863256275Z [2025-11-06 20:05:11 +0000] [2098] [ERROR] Worker (pid:2101) exited with code 3
+2025-11-06T20:05:11.865260450Z [2025-11-06 20:05:11 +0000] [2098] [ERROR] Shutting down: Master
+2025-11-06T20:05:11.865470380Z [2025-11-06 20:05:11 +0000] [2098] [ERROR] Reason: Worker failed to boot.
+
+2025-11-06T20:07:34.442170192Z    _____                               
+2025-11-06T20:07:34.442255921Z   /  _  \ __________ _________   ____  
+2025-11-06T20:07:34.442262013Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-11-06T20:07:34.442266000Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-11-06T20:07:34.442269747Z \____|__  /_____ \____/ |__|    \___  >
+2025-11-06T20:07:34.442273594Z         \/      \/                  \/ 
+2025-11-06T20:07:34.442277651Z A P P   S E R V I C E   O N   L I N U X
+2025-11-06T20:07:34.442281308Z 
+2025-11-06T20:07:34.442285105Z Documentation    : http://aka.ms/webapp-linux
+2025-11-06T20:07:34.442288902Z Python quickstart: https://aka.ms/python-qs
+2025-11-06T20:07:34.442292870Z Python version   : 3.10.19
+2025-11-06T20:07:34.444036987Z Instance Name    : 10-30-0-175
+2025-11-06T20:07:34.444042558Z Instance Id      : 8b0ed3a3c940bdd1ba4f195fc5a5d840c1c4311a825c69e6ceb63aace03ae840
+2025-11-06T20:07:34.444046365Z 
+2025-11-06T20:07:34.444050232Z Note: Any data outside '/home' is not persisted
+2025-11-06T20:07:40.945501515Z Starting OpenBSD Secure Shell server: sshd.
+2025-11-06T20:07:40.988748090Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-11-06T20:07:41.388658100Z Updating certificates in /etc/ssl/certs...
+2025-11-06T20:07:50.465396457Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2025-11-06T20:07:50.468146032Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2025-11-06T20:07:50.470822938Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_E46.pem
+2025-11-06T20:07:50.471854887Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_R46.pem
+2025-11-06T20:07:50.489756609Z 4 added, 0 removed; done.
+2025-11-06T20:07:50.489781060Z Running hooks in /etc/ca-certificates/update.d...
+2025-11-06T20:07:50.493546846Z done.
+2025-11-06T20:07:50.497715628Z CA certificates copied and updated successfully.
+2025-11-06T20:07:50.546622793Z App Command Line not configured, will attempt auto-detect
+2025-11-06T20:07:50.547139984Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2025-11-06T20:07:50.638353143Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-11-06T20:07:50.641550325Z Build Operation ID: 0a05100424a00119
+2025-11-06T20:07:50.644411866Z Oryx Version: 0.2.20251017.2, Commit: 482d4c55e818733ab33b9d2131f9dc485a21fd03, ReleaseTagName: 20251017.2
+2025-11-06T20:07:50.645406243Z Output is compressed. Extracting it...
+2025-11-06T20:07:50.648200332Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de1d6f06269b76'...
+2025-11-06T20:07:55.455778233Z App path is set to '/tmp/8de1d6f06269b76'
+2025-11-06T20:07:55.872491844Z Detected an app based on Flask
+2025-11-06T20:07:55.891714341Z Generating `gunicorn` command for 'application:app'
+2025-11-06T20:07:55.916014931Z Writing output script to '/opt/startup/startup.sh'
+2025-11-06T20:07:56.073655432Z Using packages from virtual environment antenv located at /tmp/8de1d6f06269b76/antenv.
+2025-11-06T20:07:56.073691901Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages'
+2025-11-06T20:07:56.652538665Z [2025-11-06 20:07:56 +0000] [2097] [INFO] Starting gunicorn 23.0.0
+2025-11-06T20:07:56.670225955Z [2025-11-06 20:07:56 +0000] [2097] [INFO] Listening at: http://0.0.0.0:8000 (2097)
+2025-11-06T20:07:56.670258538Z [2025-11-06 20:07:56 +0000] [2097] [INFO] Using worker: sync
+2025-11-06T20:07:56.678838852Z [2025-11-06 20:07:56 +0000] [2100] [INFO] Booting worker with pid: 2100
+2025-11-06T20:08:00.801150831Z [2025-11-06 20:08:00,800] INFO in __init__: Flask Web Project startup
+2025-11-06T20:08:00.837133957Z [2025-11-06 20:08:00 +0000] [2100] [ERROR] Exception in worker process
+2025-11-06T20:08:00.837216972Z Traceback (most recent call last):
+2025-11-06T20:08:00.837224154Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+2025-11-06T20:08:00.837230013Z     worker.init_process()
+2025-11-06T20:08:00.837235161Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+2025-11-06T20:08:00.837240700Z     self.load_wsgi()
+2025-11-06T20:08:00.837245769Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+2025-11-06T20:08:00.837251117Z     self.wsgi = self.app.wsgi()
+2025-11-06T20:08:00.837256095Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+2025-11-06T20:08:00.838589174Z     self.callable = self.load()
+2025-11-06T20:08:00.838601143Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+2025-11-06T20:08:00.838607143Z     return self.load_wsgiapp()
+2025-11-06T20:08:00.838612422Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+2025-11-06T20:08:00.838617730Z     return util.import_app(self.app_uri)
+2025-11-06T20:08:00.838622778Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+2025-11-06T20:08:00.838627937Z     mod = importlib.import_module(module)
+2025-11-06T20:08:00.838632965Z   File "/opt/python/3.10.19/lib/python3.10/importlib/__init__.py", line 126, in import_module
+2025-11-06T20:08:00.838638514Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-11-06T20:08:00.839764247Z   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+2025-11-06T20:08:00.839792623Z   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+2025-11-06T20:08:00.839797561Z   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+2025-11-06T20:08:00.839801557Z   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+2025-11-06T20:08:00.839805263Z   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+2025-11-06T20:08:00.839809039Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-11-06T20:08:00.839812875Z   File "/tmp/8de1d6f06269b76/application.py", line 6, in <module>
+2025-11-06T20:08:00.839817052Z     from FlaskWebProject import app
+2025-11-06T20:08:00.839846360Z   File "/tmp/8de1d6f06269b76/FlaskWebProject/__init__.py", line 37, in <module>
+2025-11-06T20:08:00.839851508Z     db = SQLAlchemy(app)
+2025-11-06T20:08:00.839855074Z   File "/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 758, in __init__
+2025-11-06T20:08:00.839859010Z     _include_sqlalchemy(self, query_class)
+2025-11-06T20:08:00.839864619Z   File "/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 112, in _include_sqlalchemy
+2025-11-06T20:08:00.839868646Z     for key in module.__all__:
+2025-11-06T20:08:00.839872031Z AttributeError: module 'sqlalchemy' has no attribute '__all__'
+2025-11-06T20:08:00.839875517Z [2025-11-06 20:08:00 +0000] [2100] [INFO] Worker exiting (pid: 2100)
+2025-11-06T20:08:00.839148530Z here is config: cmsimages
+2025-11-06T20:08:01.147446619Z [2025-11-06 20:08:01 +0000] [2097] [ERROR] Worker (pid:2100) exited with code 3
+2025-11-06T20:08:01.147473843Z [2025-11-06 20:08:01 +0000] [2097] [ERROR] Shutting down: Master
+2025-11-06T20:08:01.147478581Z [2025-11-06 20:08:01 +0000] [2097] [ERROR] Reason: Worker failed to boot.
+
+2025-11-06T20:10:27.083601935Z    _____                               
+2025-11-06T20:10:27.083652419Z   /  _  \ __________ _________   ____  
+2025-11-06T20:10:27.083658570Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-11-06T20:10:27.083663259Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-11-06T20:10:27.083667697Z \____|__  /_____ \____/ |__|    \___  >
+2025-11-06T20:10:27.083767853Z         \/      \/                  \/ 
+2025-11-06T20:10:27.083775748Z A P P   S E R V I C E   O N   L I N U X
+2025-11-06T20:10:27.083779886Z 
+2025-11-06T20:10:27.083783873Z Documentation    : http://aka.ms/webapp-linux
+2025-11-06T20:10:27.083788031Z Python quickstart: https://aka.ms/python-qs
+2025-11-06T20:10:27.083791958Z Python version   : 3.10.19
+2025-11-06T20:10:27.083795815Z Instance Name    : 10-30-0-175
+2025-11-06T20:10:27.083799612Z Instance Id      : 8b0ed3a3c940bdd1ba4f195fc5a5d840c1c4311a825c69e6ceb63aace03ae840
+2025-11-06T20:10:27.083803610Z 
+2025-11-06T20:10:27.083807357Z Note: Any data outside '/home' is not persisted
+2025-11-06T20:10:27.743588659Z Starting OpenBSD Secure Shell server: sshd.
+2025-11-06T20:10:27.794111329Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-11-06T20:10:27.847841219Z Updating certificates in /etc/ssl/certs...
+2025-11-06T20:10:34.089332467Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2025-11-06T20:10:34.091497712Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2025-11-06T20:10:34.095865186Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_E46.pem
+2025-11-06T20:10:34.100178741Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_R46.pem
+2025-11-06T20:10:34.118988285Z 4 added, 0 removed; done.
+2025-11-06T20:10:34.119035483Z Running hooks in /etc/ca-certificates/update.d...
+2025-11-06T20:10:34.122856522Z done.
+2025-11-06T20:10:34.140175168Z CA certificates copied and updated successfully.
+2025-11-06T20:10:34.196798219Z App Command Line not configured, will attempt auto-detect
+2025-11-06T20:10:34.198289770Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite
+2025-11-06T20:10:34.643521000Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-11-06T20:10:34.646101764Z Build Operation ID: 0a05100424a00119
+2025-11-06T20:10:34.647798186Z Oryx Version: 0.2.20251017.2, Commit: 482d4c55e818733ab33b9d2131f9dc485a21fd03, ReleaseTagName: 20251017.2
+2025-11-06T20:10:34.648071674Z Output is compressed. Extracting it...
+2025-11-06T20:10:34.649062164Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de1d6f06269b76'...
+2025-11-06T20:10:36.563620873Z App path is set to '/tmp/8de1d6f06269b76'
+2025-11-06T20:10:36.807617471Z Detected an app based on Flask
+2025-11-06T20:10:36.836213974Z Generating `gunicorn` command for 'application:app'
+2025-11-06T20:10:36.862289425Z Writing output script to '/opt/startup/startup.sh'
+2025-11-06T20:10:36.972678383Z Using packages from virtual environment antenv located at /tmp/8de1d6f06269b76/antenv.
+2025-11-06T20:10:36.972705854Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages'
+2025-11-06T20:10:37.774136482Z [2025-11-06 20:10:37 +0000] [2093] [INFO] Starting gunicorn 23.0.0
+2025-11-06T20:10:37.804292269Z [2025-11-06 20:10:37 +0000] [2093] [INFO] Listening at: http://0.0.0.0:8000 (2093)
+2025-11-06T20:10:37.804317196Z [2025-11-06 20:10:37 +0000] [2093] [INFO] Using worker: sync
+2025-11-06T20:10:37.809275194Z [2025-11-06 20:10:37 +0000] [2096] [INFO] Booting worker with pid: 2096
+2025-11-06T20:10:42.512425134Z [2025-11-06 20:10:42,512] INFO in __init__: Flask Web Project startup
+2025-11-06T20:10:42.574876744Z [2025-11-06 20:10:42 +0000] [2096] [ERROR] Exception in worker process
+2025-11-06T20:10:42.574921037Z Traceback (most recent call last):
+2025-11-06T20:10:42.574928901Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+2025-11-06T20:10:42.574935203Z     worker.init_process()
+2025-11-06T20:10:42.574940923Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+2025-11-06T20:10:42.574946674Z     self.load_wsgi()
+2025-11-06T20:10:42.574952215Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+2025-11-06T20:10:42.574957955Z     self.wsgi = self.app.wsgi()
+2025-11-06T20:10:42.574963205Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+2025-11-06T20:10:42.574968595Z     self.callable = self.load()
+2025-11-06T20:10:42.574973885Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+2025-11-06T20:10:42.574979365Z     return self.load_wsgiapp()
+2025-11-06T20:10:42.574984715Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+2025-11-06T20:10:42.574990596Z     return util.import_app(self.app_uri)
+2025-11-06T20:10:42.574995886Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+2025-11-06T20:10:42.575001476Z     mod = importlib.import_module(module)
+2025-11-06T20:10:42.575007167Z   File "/opt/python/3.10.19/lib/python3.10/importlib/__init__.py", line 126, in import_module
+2025-11-06T20:10:42.575012847Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-11-06T20:10:42.575018167Z   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+2025-11-06T20:10:42.575037663Z   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+2025-11-06T20:10:42.575041881Z   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+2025-11-06T20:10:42.575045488Z   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+2025-11-06T20:10:42.575049806Z   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+2025-11-06T20:10:42.575053733Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-11-06T20:10:42.575057400Z   File "/tmp/8de1d6f06269b76/application.py", line 6, in <module>
+2025-11-06T20:10:42.575061487Z     from FlaskWebProject import app
+2025-11-06T20:10:42.575065104Z   File "/tmp/8de1d6f06269b76/FlaskWebProject/__init__.py", line 37, in <module>
+2025-11-06T20:10:42.575069072Z     db = SQLAlchemy(app)
+2025-11-06T20:10:42.575072668Z   File "/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 758, in __init__
+2025-11-06T20:10:42.575076385Z     _include_sqlalchemy(self, query_class)
+2025-11-06T20:10:42.575080904Z   File "/tmp/8de1d6f06269b76/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 112, in _include_sqlalchemy
+2025-11-06T20:10:42.575084971Z     for key in module.__all__:
+2025-11-06T20:10:42.575088468Z AttributeError: module 'sqlalchemy' has no attribute '__all__'
+2025-11-06T20:10:42.577101958Z [2025-11-06 20:10:42 +0000] [2096] [INFO] Worker exiting (pid: 2096)
+2025-11-06T20:10:42.577166348Z here is config: cmsimages
+2025-11-06T20:10:42.871192321Z [2025-11-06 20:10:42 +0000] [2093] [ERROR] Worker (pid:2096) exited with code 3
+2025-11-06T20:10:42.872934858Z [2025-11-06 20:10:42 +0000] [2093] [ERROR] Shutting down: Master
+2025-11-06T20:10:42.876003069Z [2025-11-06 20:10:42 +0000] [2093] [ERROR] Reason: Worker failed to boot.
+
+2025-11-06T20:14:36.148508611Z    _____                               
+2025-11-06T20:14:36.148553685Z   /  _  \ __________ _________   ____  
+2025-11-06T20:14:36.148558945Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-11-06T20:14:36.148563343Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-11-06T20:14:36.148567280Z \____|__  /_____ \____/ |__|    \___  >
+2025-11-06T20:14:36.148571157Z         \/      \/                  \/ 
+2025-11-06T20:14:36.148575295Z A P P   S E R V I C E   O N   L I N U X
+2025-11-06T20:14:36.148579112Z 
+2025-11-06T20:14:36.148582879Z Documentation    : http://aka.ms/webapp-linux
+2025-11-06T20:14:36.148586316Z Python quickstart: https://aka.ms/python-qs
+2025-11-06T20:14:36.148589722Z Python version   : 3.10.19
+2025-11-06T20:14:36.148593429Z Instance Name    : 10-30-0-175
+2025-11-06T20:14:36.148597176Z Instance Id      : 8b0ed3a3c940bdd1ba4f195fc5a5d840c1c4311a825c69e6ceb63aace03ae840
+2025-11-06T20:14:36.148601133Z 
+2025-11-06T20:14:36.148680471Z Note: Any data outside '/home' is not persisted
+2025-11-06T20:14:36.723110919Z Starting OpenBSD Secure Shell server: sshd.
+2025-11-06T20:14:36.732684007Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-11-06T20:14:36.887293122Z Updating certificates in /etc/ssl/certs...
+2025-11-06T20:14:43.732744437Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2025-11-06T20:14:43.734674553Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2025-11-06T20:14:43.736328966Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_E46.pem
+2025-11-06T20:14:43.737757558Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_R46.pem
+2025-11-06T20:14:43.750507165Z 4 added, 0 removed; done.
+2025-11-06T20:14:43.750853779Z Running hooks in /etc/ca-certificates/update.d...
+2025-11-06T20:14:43.758243928Z done.
+2025-11-06T20:14:43.774033823Z CA certificates copied and updated successfully.
+2025-11-06T20:14:43.821390112Z Site's appCommandLine: python application.py
+2025-11-06T20:14:43.822043977Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'python application.py'
+2025-11-06T20:14:43.883425321Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-11-06T20:14:43.886385260Z Build Operation ID: 6426a9cd215438b4
+2025-11-06T20:14:43.888066647Z Oryx Version: 0.2.20251017.2, Commit: 482d4c55e818733ab33b9d2131f9dc485a21fd03, ReleaseTagName: 20251017.2
+2025-11-06T20:14:43.888189322Z Output is compressed. Extracting it...
+2025-11-06T20:14:43.889148186Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de1d70ec57686d'...
+2025-11-06T20:14:45.588915421Z App path is set to '/tmp/8de1d70ec57686d'
+2025-11-06T20:14:45.912027876Z Writing output script to '/opt/startup/startup.sh'
+2025-11-06T20:14:46.024339592Z Using packages from virtual environment antenv located at /tmp/8de1d70ec57686d/antenv.
+2025-11-06T20:14:46.024366012Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de1d70ec57686d/antenv/lib/python3.10/site-packages'
+2025-11-06T20:14:48.572194616Z [2025-11-06 20:14:48,571] INFO in __init__: Flask Web Project startup
+2025-11-06T20:14:48.588982496Z Traceback (most recent call last):
+2025-11-06T20:14:48.589002674Z   File "/tmp/8de1d70ec57686d/application.py", line 21, in <module>
+2025-11-06T20:14:48.589009857Z     from FlaskWebProject import app
+2025-11-06T20:14:48.589015257Z   File "/tmp/8de1d70ec57686d/FlaskWebProject/__init__.py", line 37, in <module>
+2025-11-06T20:14:48.589021048Z     db = SQLAlchemy(app)
+2025-11-06T20:14:48.589026388Z   File "/tmp/8de1d70ec57686d/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 758, in __init__
+2025-11-06T20:14:48.589032199Z     _include_sqlalchemy(self, query_class)
+2025-11-06T20:14:48.589037709Z   File "/tmp/8de1d70ec57686d/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 112, in _include_sqlalchemy
+2025-11-06T20:14:48.589043370Z     for key in module.__all__:
+2025-11-06T20:14:48.589048789Z AttributeError: module 'sqlalchemy' has no attribute '__all__'. Did you mean: '__file__'?
+2025-11-06T20:14:48.589252708Z here is config: cmsimages
+
+2025-11-06T20:20:31.496961052Z    _____                               
+2025-11-06T20:20:31.497010073Z   /  _  \ __________ _________   ____  
+2025-11-06T20:20:31.497015923Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-11-06T20:20:31.497020242Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-11-06T20:20:31.497024309Z \____|__  /_____ \____/ |__|    \___  >
+2025-11-06T20:20:31.497028387Z         \/      \/                  \/ 
+2025-11-06T20:20:31.497032204Z A P P   S E R V I C E   O N   L I N U X
+2025-11-06T20:20:31.497039558Z 
+2025-11-06T20:20:31.497043365Z Documentation    : http://aka.ms/webapp-linux
+2025-11-06T20:20:31.497047232Z Python quickstart: https://aka.ms/python-qs
+2025-11-06T20:20:31.497051369Z Python version   : 3.10.19
+2025-11-06T20:20:31.497054966Z Instance Name    : 10-30-0-175
+2025-11-06T20:20:31.497058783Z Instance Id      : 8b0ed3a3c940bdd1ba4f195fc5a5d840c1c4311a825c69e6ceb63aace03ae840
+2025-11-06T20:20:31.497062851Z 
+2025-11-06T20:20:31.497066688Z Note: Any data outside '/home' is not persisted
+2025-11-06T20:20:32.339187148Z Starting OpenBSD Secure Shell server: sshd.
+2025-11-06T20:20:32.373491785Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-11-06T20:20:32.417443487Z Updating certificates in /etc/ssl/certs...
+2025-11-06T20:20:39.884737395Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2025-11-06T20:20:39.887111021Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2025-11-06T20:20:39.889472828Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_E46.pem
+2025-11-06T20:20:39.890489166Z rehash: warning: skipping duplicate certificate in azl_Sectigo_Public_Server_Authentication_Root_R46.pem
+2025-11-06T20:20:39.903895197Z 4 added, 0 removed; done.
+2025-11-06T20:20:39.905260964Z Running hooks in /etc/ca-certificates/update.d...
+2025-11-06T20:20:39.908266136Z done.
+2025-11-06T20:20:39.914091258Z CA certificates copied and updated successfully.
+2025-11-06T20:20:39.965038230Z Site's appCommandLine: gunicorn --bind=0.0.0.0 --timeout 600 application:app
+2025-11-06T20:20:39.965800195Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn --bind=0.0.0.0 --timeout 600 application:app'
+2025-11-06T20:20:40.023954770Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-11-06T20:20:40.026813986Z Build Operation ID: 6426a9cd215438b4
+2025-11-06T20:20:40.029932368Z Oryx Version: 0.2.20251017.2, Commit: 482d4c55e818733ab33b9d2131f9dc485a21fd03, ReleaseTagName: 20251017.2
+2025-11-06T20:20:40.030989432Z Output is compressed. Extracting it...
+2025-11-06T20:20:40.033993261Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de1d70ec57686d'...
+2025-11-06T20:20:41.971313820Z App path is set to '/tmp/8de1d70ec57686d'
+2025-11-06T20:20:42.689805314Z Writing output script to '/opt/startup/startup.sh'
+2025-11-06T20:20:42.915604234Z Using packages from virtual environment antenv located at /tmp/8de1d70ec57686d/antenv.
+2025-11-06T20:20:42.915632767Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de1d70ec57686d/antenv/lib/python3.10/site-packages'
+2025-11-06T20:20:43.393604259Z [2025-11-06 20:20:43 +0000] [2092] [INFO] Starting gunicorn 23.0.0
+2025-11-06T20:20:43.394117963Z [2025-11-06 20:20:43 +0000] [2092] [INFO] Listening at: http://0.0.0.0:8000 (2092)
+2025-11-06T20:20:43.394264625Z [2025-11-06 20:20:43 +0000] [2092] [INFO] Using worker: sync
+2025-11-06T20:20:43.401088102Z [2025-11-06 20:20:43 +0000] [2093] [INFO] Booting worker with pid: 2093
+2025-11-06T20:20:45.958478376Z [2025-11-06 20:20:45,958] INFO in __init__: Flask Web Project startup
+2025-11-06T20:20:45.998409720Z [2025-11-06 20:20:45 +0000] [2093] [ERROR] Exception in worker process
+2025-11-06T20:20:45.998625010Z Traceback (most recent call last):
+2025-11-06T20:20:45.998637974Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+2025-11-06T20:20:45.998645327Z     worker.init_process()
+2025-11-06T20:20:45.998651319Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+2025-11-06T20:20:45.998656999Z     self.load_wsgi()
+2025-11-06T20:20:45.998662319Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+2025-11-06T20:20:45.998668090Z     self.wsgi = self.app.wsgi()
+2025-11-06T20:20:45.998673420Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+2025-11-06T20:20:45.998728402Z     self.callable = self.load()
+2025-11-06T20:20:45.998736787Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+2025-11-06T20:20:45.998743390Z     return self.load_wsgiapp()
+2025-11-06T20:20:45.998749060Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+2025-11-06T20:20:45.998754590Z     return util.import_app(self.app_uri)
+2025-11-06T20:20:45.998760271Z   File "/opt/python/3.10.19/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+2025-11-06T20:20:45.998766582Z     mod = importlib.import_module(module)
+2025-11-06T20:20:45.998771702Z   File "/opt/python/3.10.19/lib/python3.10/importlib/__init__.py", line 126, in import_module
+2025-11-06T20:20:45.998776752Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-11-06T20:20:45.998781861Z   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+2025-11-06T20:20:45.998788073Z   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+2025-11-06T20:20:45.998809562Z   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+2025-11-06T20:20:45.998814141Z   File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+2025-11-06T20:20:45.998817938Z   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+2025-11-06T20:20:45.998821765Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-11-06T20:20:45.998825622Z   File "/tmp/8de1d70ec57686d/application.py", line 21, in <module>
+2025-11-06T20:20:45.998829379Z     from FlaskWebProject import app
+2025-11-06T20:20:45.998833016Z   File "/tmp/8de1d70ec57686d/FlaskWebProject/__init__.py", line 37, in <module>
+2025-11-06T20:20:45.998836863Z     db = SQLAlchemy(app)
+2025-11-06T20:20:45.998840339Z   File "/tmp/8de1d70ec57686d/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 758, in __init__
+2025-11-06T20:20:45.998844307Z     _include_sqlalchemy(self, query_class)
+2025-11-06T20:20:45.998850108Z   File "/tmp/8de1d70ec57686d/antenv/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 112, in _include_sqlalchemy
+2025-11-06T20:20:45.998854446Z     for key in module.__all__:
+2025-11-06T20:20:45.998858123Z AttributeError: module 'sqlalchemy' has no attribute '__all__'
+2025-11-06T20:20:45.998861729Z [2025-11-06 20:20:45 +0000] [2093] [INFO] Worker exiting (pid: 2093)
+2025-11-06T20:20:45.999215536Z here is config: cmsimages
+2025-11-06T20:20:46.151130056Z [2025-11-06 20:20:46 +0000] [2092] [ERROR] Worker (pid:2093) exited with code 3
+2025-11-06T20:20:46.151569853Z [2025-11-06 20:20:46 +0000] [2092] [ERROR] Shutting down: Master
+2025-11-06T20:20:46.152664076Z [2025-11-06 20:20:46 +0000] [2092] [ERROR] Reason: Worker failed to boot.
+

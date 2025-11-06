@@ -1,0 +1,3 @@
+2025-11-06 21:01:26,533  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2025-11-06 21:01:26,533  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
+2025-11-06 21:01:26,534  [MainThread] [DEBUG] : Initialized AppServiceAppLogging

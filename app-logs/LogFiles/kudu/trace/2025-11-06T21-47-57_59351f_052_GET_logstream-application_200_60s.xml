@@ -1,0 +1,6 @@
+<step title="Incoming Request" date="2025-11-06T21:47:57.493" instance="59351f" url="/logstream/application" method="GET" type="request" pid="768,1,20" Host="udacitycms-hsggc0fbb9cpfyav.scm.canadacentral-01.azurewebsites.net" User-Agent="AZURECLI/2.65.0 (MSI)" Accept-Encoding="identity" Authorization="Bea..." x-ms-client-request-id="3ceda0f7-bb5a-11f0-ae40-acb4806006f2" X-ARR-LOG-ID="3ceda0f7-bb5a-11f0-ae40-acb4806006f2" CLIENT-IP="146.23.21.60:38439" X-SITE-DEPLOYMENT-ID="udacitycms" WAS-DEFAULT-HOSTNAME="udacitycms-hsggc0fbb9cpfyav.scm.canadacentral-01.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/logstream/application" X-Client-IP="146.23.21.60" X-Client-Port="38439" >
+  <step title="Cleanup Xml Logs" date="2025-11-06T21:47:57.502" /><!-- duration: 15ms -->
+  <step title="LogStreamHandlerMiddleware.Invoke" date="2025-11-06T21:47:57.547" /><!-- duration: 200ms -->
+  <step title="Error occurred" date="2025-11-06T21:48:57.744" type="error" text="LogStreamManager: ProcessRequest end" /><!-- duration: 7ms -->
+  <step title="Outgoing response" date="2025-11-06T21:48:57.766" type="response" statusCode="200" statusText="OK" /><!-- duration: 6ms -->
+</step><!-- duration: 60291ms -->

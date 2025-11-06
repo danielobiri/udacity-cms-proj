@@ -1,0 +1,9 @@
+<step title="Incoming Request" date="2025-11-06T20:29:00.726" instance="8b0ed3" url="/api/deployments/latest?deployer=OneDeploy&amp;time=2025-11-06_20-28-22Z" method="GET" type="request" pid="770,1,20" Host="udacitycms-hsggc0fbb9cpfyav.scm.canadacentral-01.azurewebsites.net" User-Agent="GITHUBACTIONS_DeployWebAppToAzure_039cf66f26274fd3261d790cacecc3c3ba287e91810a3657b032c0e2ae56d580" Authorization="Bea..." Content-Type="application/json; charset=utf-8" Cookie="ARRAffinity=8b0ed3a3c940bdd1ba4f195fc5a5d840c1c4311a825c69e6ceb63aace03ae840;Path=/;HttpOnly;Secure;Domain=udacitycms-hsggc0fbb9cpfyav.scm.canadacentral-01.azurewebsites.net; ARRAffinitySameSite=8b0ed3a3c940bdd1ba4f195fc5a5d840c1c4311a825c69e6ceb63aace03ae840;Path=/;HttpOnly;SameSite=None;Secure;Domain=udacitycms-hsggc0fbb9cpfyav.scm.canadacentral-01.azurewebsites.net" Content-Length="0" X-ARR-LOG-ID="fee90b7d-d445-4d9b-b216-6e8747caf740" CLIENT-IP="172.184.173.242:50176" X-SITE-DEPLOYMENT-ID="udacitycms" WAS-DEFAULT-HOSTNAME="udacitycms-hsggc0fbb9cpfyav.scm.canadacentral-01.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/deployments/latest?deployer=OneDeploy&amp;time=2025-11-06_20-28-22Z" X-Client-IP="172.184.173.242" X-Client-Port="50176" >
+  <step title="Cleanup Xml Logs" date="2025-11-06T20:29:00.737" /><!-- duration: 13ms -->
+  <step title="DeploymentService.GetResult" date="2025-11-06T20:29:00.783" >
+    <step title="DeploymentService.GetLatestDeployment" date="2025-11-06T20:29:00.797" >
+      <step title="DeploymentManager.GetResults" date="2025-11-06T20:29:00.805" /><!-- duration: 485ms -->
+    </step><!-- duration: 497ms -->
+  </step><!-- duration: 520ms -->
+  <step title="Outgoing response" date="2025-11-06T20:29:01.309" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 5ms -->
+</step><!-- duration: 593ms -->

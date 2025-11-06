@@ -1,0 +1,140 @@
+2025-11-06T20:34:02.9751105Z,Updating submodules.,d82681ca-727b-417c-b556-e4099bda6152,0
+2025-11-06T20:34:04.1128664Z,Preparing deployment for commit id '35744b9e-b'.,33c6789a-7e48-49ed-8a74-c894507d636a,0
+2025-11-06T20:34:04.4727588Z,PreDeployment: context.CleanOutputPath False,a92f5b59-8dfd-4af8-b698-2f4e2411116c,0
+2025-11-06T20:34:04.6455766Z,PreDeployment: context.OutputPath /home/site/wwwroot,62030229-0702-4fc0-a4f4-8c0a083a79ce,0
+2025-11-06T20:34:04.8130694Z,Repository path is /tmp/zipdeploy/extracted,1cd61f81-e45a-441c-a602-028dd24001a1,0
+2025-11-06T20:34:04.9915294Z,Running oryx build...,3098032c-7d59-4b8e-8b57-14da419b9298,0
+	2025-11-06T20:34:05.0040311Z,Command: oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform python --platform-version 3.10 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8de1d73d3acf5e3 --compress-destination-dir | tee /tmp/oryx-build.log,,0
+	2025-11-06T20:34:09.1612398Z,Operation performed by Microsoft Oryx&comma; https://github.com/Microsoft/Oryx,,0
+	2025-11-06T20:34:09.1803510Z,You can report issues at https://github.com/Microsoft/Oryx/issues,,0
+	2025-11-06T20:34:09.1962978Z,,,0
+	2025-11-06T20:34:09.2075667Z,Oryx Version: 0.2.20251022.1+bef98bc7139feefaa74be16de9d835e2c85385d4&comma; Commit: bef98bc7139feefaa74be16de9d835e2c85385d4&comma; ReleaseTagName: 20251022.1,,0
+	2025-11-06T20:34:09.2171981Z,,,0
+	2025-11-06T20:34:09.2248001Z,Build Operation ID: e053ec261b50e57a,,0
+	2025-11-06T20:34:09.2345599Z,Repository Commit : 35744b9e-bab6-445c-aaf4-0786dca79f1b,,0
+	2025-11-06T20:34:09.2491957Z,OS Type           : bullseye,,0
+	2025-11-06T20:34:09.2630448Z,Image Type        : githubactions,,0
+	2025-11-06T20:34:09.2719861Z,,,0
+	2025-11-06T20:34:09.2844945Z,Primary SDK Storage URL: https://oryx-cdn.microsoft.io,,0
+	2025-11-06T20:34:09.3001881Z,Backup SDK Storage URL: ,,0
+	2025-11-06T20:34:09.3093126Z,Detecting platforms...,,0
+	2025-11-06T20:34:09.3202050Z,External SDK provider is enabled.,,0
+	2025-11-06T20:34:09.4217248Z,Requesting metadata for platform python from external SDK provider,,0
+	2025-11-06T20:34:11.9854811Z,Requesting metadata for platform python from external SDK provider,,0
+	2025-11-06T20:34:12.3220542Z,Detected following platforms:,,0
+	2025-11-06T20:34:12.3304352Z,  python: 3.10.19,,0
+	2025-11-06T20:34:12.5902762Z,,,0
+	2025-11-06T20:34:12.6396516Z,Using intermediate directory '/tmp/8de1d73d3acf5e3'.,,0
+	2025-11-06T20:34:12.6497293Z,,,0
+	2025-11-06T20:34:12.6621454Z,Copying files to the intermediate directory...,,0
+	2025-11-06T20:34:12.7457135Z,Done in 0 sec(s).,,0
+	2025-11-06T20:34:12.7587265Z,,,0
+	2025-11-06T20:34:12.7671212Z,Source directory     : /tmp/8de1d73d3acf5e3,,0
+	2025-11-06T20:34:12.7745119Z,Destination directory: /home/site/wwwroot,,0
+	2025-11-06T20:34:12.8209822Z,,,0
+	2025-11-06T20:34:13.0419131Z,Python Version: /tmp/oryx/platforms/python/3.10.19/bin/python3.10,,0
+	2025-11-06T20:34:13.0592086Z,Creating directory for command manifest file if it does not exist,,0
+	2025-11-06T20:34:13.0807639Z,Removing existing manifest file,,0
+	2025-11-06T20:34:13.1393594Z,Python Virtual Environment: antenv,,0
+	2025-11-06T20:34:13.1499957Z,Creating virtual environment...,,0
+	2025-11-06T20:34:13.1619167Z,Executing: /tmp/oryx/platforms/python/3.10.19/bin/python3.10 -m venv antenv --copies --system-site-packages,,0
+	2025-11-06T20:34:20.1157068Z,Activating virtual environment...,,0
+	2025-11-06T20:34:20.1341935Z,Running pip install...,,0
+	2025-11-06T20:34:33.0443569Z,[20:34:20+0000] Collecting Flask==2.0.3,,0
+	2025-11-06T20:34:33.1044077Z,[20:34:20+0000]   Using cached Flask-2.0.3-py3-none-any.whl (95 kB),,0
+	2025-11-06T20:34:33.1296401Z,[20:34:20+0000] Collecting Flask-Login==0.5.0,,0
+	2025-11-06T20:34:33.1493534Z,[20:34:20+0000]   Using cached Flask_Login-0.5.0-py2.py3-none-any.whl (16 kB),,0
+	2025-11-06T20:34:33.1672439Z,[20:34:20+0000] Collecting Flask-Session==0.4.0,,0
+	2025-11-06T20:34:33.1818860Z,[20:34:20+0000]   Using cached Flask_Session-0.4.0-py2.py3-none-any.whl (7.5 kB),,0
+	2025-11-06T20:34:33.1933229Z,[20:34:20+0000] Collecting Flask-SQLAlchemy==2.5.1,,0
+	2025-11-06T20:34:33.2116138Z,[20:34:20+0000]   Using cached Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl (17 kB),,0
+	2025-11-06T20:34:33.2257944Z,[20:34:20+0000] Collecting Flask-WTF==0.14.3,,0
+	2025-11-06T20:34:33.2899669Z,[20:34:20+0000]   Using cached Flask_WTF-0.14.3-py2.py3-none-any.whl (13 kB),,0
+	2025-11-06T20:34:33.3081695Z,[20:34:20+0000] Collecting msal>=1.13.0,,0
+	2025-11-06T20:34:33.3266452Z,[20:34:20+0000]   Using cached msal-1.34.0-py3-none-any.whl (116 kB),,0
+	2025-11-06T20:34:33.3352008Z,[20:34:21+0000] Collecting pyodbc>=4.0.30,,0
+	2025-11-06T20:34:33.3449918Z,[20:34:21+0000]   Using cached pyodbc-5.3.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (322 kB),,0
+	2025-11-06T20:34:33.3770996Z,[20:34:21+0000] Collecting python-dotenv,,0
+	2025-11-06T20:34:33.3903705Z,[20:34:21+0000]   Using cached python_dotenv-1.2.1-py3-none-any.whl (21 kB),,0
+	2025-11-06T20:34:33.4030409Z,[20:34:21+0000] Collecting requests>=2.22.0,,0
+	2025-11-06T20:34:33.4179266Z,[20:34:21+0000]   Using cached requests-2.32.5-py3-none-any.whl (64 kB),,0
+	2025-11-06T20:34:33.4293295Z,[20:34:21+0000] Collecting Werkzeug==2.0.3,,0
+	2025-11-06T20:34:33.4400827Z,[20:34:21+0000]   Using cached Werkzeug-2.0.3-py3-none-any.whl (289 kB),,0
+	2025-11-06T20:34:33.4501662Z,[20:34:21+0000] Collecting WTForms>=2.2.1,,0
+	2025-11-06T20:34:33.4635379Z,[20:34:21+0000]   Using cached wtforms-3.2.1-py3-none-any.whl (152 kB),,0
+	2025-11-06T20:34:33.4752910Z,[20:34:22+0000] Collecting SQLAlchemy==1.4.46,,0
+	2025-11-06T20:34:33.4842666Z,[20:34:22+0000]   Using cached SQLAlchemy-1.4.46-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB),,0
+	2025-11-06T20:34:33.4931909Z,[20:34:22+0000] Collecting azure-storage-blob>=12.0.0,,0
+	2025-11-06T20:34:33.5096707Z,[20:34:22+0000]   Using cached azure_storage_blob-12.27.1-py3-none-any.whl (428 kB),,0
+	2025-11-06T20:34:33.5196700Z,[20:34:22+0000] Collecting Pillow>=8.0.0,,0
+	2025-11-06T20:34:33.5315435Z,[20:34:23+0000]   Using cached pillow-12.0.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB),,0
+	2025-11-06T20:34:33.5411595Z,[20:34:23+0000] Collecting cryptography>=3.0.0,,0
+	2025-11-06T20:34:33.5554984Z,[20:34:23+0000]   Using cached cryptography-46.0.3-cp38-abi3-manylinux_2_28_x86_64.whl (4.5 MB),,0
+	2025-11-06T20:34:33.5698882Z,[20:34:23+0000] Collecting gunicorn,,0
+	2025-11-06T20:34:33.5794798Z,[20:34:23+0000]   Using cached gunicorn-23.0.0-py3-none-any.whl (85 kB),,0
+	2025-11-06T20:34:33.5884160Z,[20:34:23+0000] Collecting click>=7.1.2,,0
+	2025-11-06T20:34:33.6021485Z,[20:34:23+0000]   Using cached click-8.3.0-py3-none-any.whl (107 kB),,0
+	2025-11-06T20:34:33.6167675Z,[20:34:23+0000] Collecting itsdangerous>=2.0,,0
+	2025-11-06T20:34:33.6278810Z,[20:34:23+0000]   Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB),,0
+	2025-11-06T20:34:33.6400524Z,[20:34:24+0000] Collecting Jinja2>=3.0,,0
+	2025-11-06T20:34:33.6497187Z,[20:34:24+0000]   Using cached jinja2-3.1.6-py3-none-any.whl (134 kB),,0
+	2025-11-06T20:34:33.6698578Z,[20:34:24+0000] Collecting cachelib,,0
+	2025-11-06T20:34:33.6892613Z,[20:34:24+0000]   Using cached cachelib-0.13.0-py3-none-any.whl (20 kB),,0
+	2025-11-06T20:34:33.7017785Z,[20:34:24+0000] Collecting greenlet!=0.4.17,,0
+	2025-11-06T20:34:33.7109556Z,[20:34:24+0000]   Using cached greenlet-3.2.4-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (584 kB),,0
+	2025-11-06T20:34:33.7202854Z,[20:34:24+0000] Collecting PyJWT[crypto]<3&comma;>=1.0.0,,0
+	2025-11-06T20:34:33.7317666Z,[20:34:24+0000]   Using cached PyJWT-2.10.1-py3-none-any.whl (22 kB),,0
+	2025-11-06T20:34:33.7428557Z,[20:34:25+0000] Collecting charset_normalizer<4&comma;>=2,,0
+	2025-11-06T20:34:33.7512585Z,[20:34:25+0000]   Using cached charset_normalizer-3.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB),,0
+	2025-11-06T20:34:33.7609014Z,[20:34:25+0000] Collecting urllib3<3&comma;>=1.21.1,,0
+	2025-11-06T20:34:33.7734153Z,[20:34:25+0000]   Using cached urllib3-2.5.0-py3-none-any.whl (129 kB),,0
+	2025-11-06T20:34:33.7885088Z,[20:34:25+0000] Collecting certifi>=2017.4.17,,0
+	2025-11-06T20:34:33.8017746Z,[20:34:25+0000]   Using cached certifi-2025.10.5-py3-none-any.whl (163 kB),,0
+	2025-11-06T20:34:33.8130604Z,[20:34:25+0000] Collecting idna<4&comma;>=2.5,,0
+	2025-11-06T20:34:33.8252837Z,[20:34:25+0000]   Using cached idna-3.11-py3-none-any.whl (71 kB),,0
+	2025-11-06T20:34:33.8396442Z,[20:34:25+0000] Collecting markupsafe,,0
+	2025-11-06T20:34:33.8501406Z,[20:34:25+0000]   Using cached markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB),,0
+	2025-11-06T20:34:33.8607093Z,[20:34:25+0000] Collecting azure-core>=1.30.0,,0
+	2025-11-06T20:34:33.8712448Z,[20:34:25+0000]   Using cached azure_core-1.36.0-py3-none-any.whl (213 kB),,0
+	2025-11-06T20:34:33.8859774Z,[20:34:25+0000] Collecting typing-extensions>=4.6.0,,0
+	2025-11-06T20:34:33.9014932Z,[20:34:25+0000]   Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB),,0
+	2025-11-06T20:34:33.9130521Z,[20:34:25+0000] Collecting isodate>=0.6.1,,0
+	2025-11-06T20:34:33.9255398Z,[20:34:25+0000]   Using cached isodate-0.7.2-py3-none-any.whl (22 kB),,0
+	2025-11-06T20:34:33.9404761Z,[20:34:26+0000] Collecting cffi>=2.0.0,,0
+	2025-11-06T20:34:33.9516586Z,[20:34:26+0000]   Using cached cffi-2.0.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB),,0
+	2025-11-06T20:34:33.9612169Z,[20:34:26+0000] Collecting packaging,,0
+	2025-11-06T20:34:33.9712495Z,[20:34:26+0000]   Using cached packaging-25.0-py3-none-any.whl (66 kB),,0
+	2025-11-06T20:34:33.9823571Z,[20:34:26+0000] Collecting pycparser,,0
+	2025-11-06T20:34:33.9941176Z,[20:34:26+0000]   Using cached pycparser-2.23-py3-none-any.whl (118 kB),,0
+	2025-11-06T20:34:34.0147151Z,[20:34:27+0000] Installing collected packages: Werkzeug&comma; urllib3&comma; typing-extensions&comma; python-dotenv&comma; pyodbc&comma; PyJWT&comma; pycparser&comma; Pillow&comma; packaging&comma; markupsafe&comma; itsdangerous&comma; isodate&comma; idna&comma; greenlet&comma; click&comma; charset_normalizer&comma; certifi&comma; cachelib&comma; WTForms&comma; SQLAlchemy&comma; requests&comma; Jinja2&comma; gunicorn&comma; cffi&comma; Flask&comma; cryptography&comma; azure-core&comma; Flask-WTF&comma; Flask-SQLAlchemy&comma; Flask-Session&comma; Flask-Login&comma; azure-storage-blob&comma; msal,,0
+	2025-11-06T20:34:34.0300026Z,[20:34:32+0000] Successfully installed Flask-2.0.3 Flask-Login-0.5.0 Flask-SQLAlchemy-2.5.1 Flask-Session-0.4.0 Flask-WTF-0.14.3 Jinja2-3.1.6 Pillow-12.0.0 PyJWT-2.10.1 SQLAlchemy-1.4.46 WTForms-3.2.1 Werkzeug-2.0.3 azure-core-1.36.0 azure-storage-blob-12.27.1 cachelib-0.13.0 certifi-2025.10.5 cffi-2.0.0 charset_normalizer-3.4.4 click-8.3.0 cryptography-46.0.3 greenlet-3.2.4 gunicorn-23.0.0 idna-3.11 isodate-0.7.2 itsdangerous-2.2.0 markupsafe-3.0.3 msal-1.34.0 packaging-25.0 pycparser-2.23 pyodbc-5.3.0 python-dotenv-1.2.1 requests-2.32.5 typing-extensions-4.15.0 urllib3-2.5.0,,0
+	2025-11-06T20:34:34.0435129Z,,,0
+	2025-11-06T20:34:34.0656452Z,[notice] A new release of pip is available: 23.0.1 -> 25.3,,0
+	2025-11-06T20:34:34.0857122Z,[notice] To update&comma; run: pip install --upgrade pip,,0
+	2025-11-06T20:34:34.0993640Z,Not a vso image&comma; so not writing build commands,,0
+	2025-11-06T20:34:34.1127685Z,Preparing output...,,0
+	2025-11-06T20:34:34.1384590Z,,,0
+	2025-11-06T20:34:34.1478424Z,Copying files to destination directory '/tmp/_preCompressedDestinationDir'...,,0
+	2025-11-06T20:34:37.4394864Z,Done in 4 sec(s).,,0
+	2025-11-06T20:34:37.4618995Z,Compressing content of directory '/tmp/_preCompressedDestinationDir'...,,0
+	2025-11-06T20:34:42.9855205Z,Copied the compressed output to '/home/site/wwwroot',,0
+	2025-11-06T20:34:43.2241400Z,,,0
+	2025-11-06T20:34:43.2425340Z,Removing existing manifest file,,0
+	2025-11-06T20:34:43.2562111Z,Creating a manifest file...,,0
+	2025-11-06T20:34:43.2834147Z,Manifest file created.,,0
+	2025-11-06T20:34:43.2966900Z,Copying .ostype to manifest output directory.,,0
+	2025-11-06T20:34:43.3469954Z,,,0
+	2025-11-06T20:34:43.3625362Z,Done in 31 sec(s).,,0
+2025-11-06T20:34:43.5580808Z,Running post deployment command(s)...,4ddbf740-ebfe-404d-bb76-33d245001530,0
+2025-11-06T20:34:43.6941853Z,,9fc57353-2957-4da6-89ea-f017a8ac14e9,0
+2025-11-06T20:34:43.8138059Z,Generating summary of Oryx build,82886c58-5690-46e8-90f8-e45241258f70,0
+2025-11-06T20:34:43.9607912Z,Parsing the build logs,1467e7d1-58db-4043-b095-168ce065088e,0
+2025-11-06T20:34:44.0969900Z,Found 0 issue(s),91d029c7-b7b5-4494-89c4-65835b2e66d0,0
+2025-11-06T20:34:44.2428488Z,,6db766a8-cf50-4be9-9bcc-e925b4369dcb,0
+2025-11-06T20:34:44.3603798Z,Build Summary :,25f21e15-0874-4974-944a-975873b8eea3,0
+2025-11-06T20:34:44.4768866Z,===============,39606e38-5b4b-4085-be68-e1b609a608ac,0
+2025-11-06T20:34:44.5962598Z,Errors (0),7683c1ec-17e0-4ae1-8422-c6a975e6a1ea,0
+2025-11-06T20:34:44.7279623Z,Warnings (0),9571e704-5c21-47db-a78a-245e5c3766bb,0
+2025-11-06T20:34:44.8472055Z,,afdc301d-0ef1-4048-a7c9-e914bf75e40d,0
+2025-11-06T20:34:44.9892310Z,Triggering container recycle for OneDeploy by adding/updating restartTrigger.txt to the site root path,e0aa7b6c-59e3-4e81-9d83-410aa6401711,0
+2025-11-06T20:34:45.1639487Z,Deployment successful. deployer = OneDeploy deploymentPath = OneDeploy,c897421d-7f03-46e0-bd95-21cf2a319e38,0

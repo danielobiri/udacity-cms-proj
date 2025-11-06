@@ -1,0 +1,18 @@
+<step title="Incoming Request" date="2025-11-06T20:52:25.659" instance="8b0ed3" url="/api/publish?async=true&amp;deployer=GITHUB_ONE_DEPLOY&amp;type=zip&amp;message=%7B%22type%22%3A%22deployment%22%2C%22sha%22%3A%2264e2af97181378120c150bb782377294ca935540%22%2C%22repoName%22%3A%22danielobiri%2Fudacity-cms-proj%22%2C%22actor%22%3A%22danielobiri%22%2C%22slotName%22%3A%22Production%22%2C%22commitMessage%22%3A%22Fix%20Jinja2%2FMarkupSafe%20compatibility%20and%20reset%20startup%20command%22%7D" method="POST" type="request" pid="768,1,5" Host="udacitycms-hsggc0fbb9cpfyav.scm.canadacentral-01.azurewebsites.net" User-Agent="GITHUBACTIONS_DeployWebAppToAzure_039cf66f26274fd3261d790cacecc3c3ba287e91810a3657b032c0e2ae56d580" Authorization="Bea..." Content-Type="application/octet-stream" Cookie="ARRAffinity=8b0ed3a3c940bdd1ba4f195fc5a5d840c1c4311a825c69e6ceb63aace03ae840;Path=/;HttpOnly;Secure;Domain=udacitycms-hsggc0fbb9cpfyav.scm.canadacentral-01.azurewebsites.net; ARRAffinitySameSite=8b0ed3a3c940bdd1ba4f195fc5a5d840c1c4311a825c69e6ceb63aace03ae840;Path=/;HttpOnly;SameSite=None;Secure;Domain=udacitycms-hsggc0fbb9cpfyav.scm.canadacentral-01.azurewebsites.net" Transfer-Encoding="chunked" X-ARR-LOG-ID="77002b18-9df1-45d7-9493-6897cbbea812" CLIENT-IP="52.157.2.247:54320" X-SITE-DEPLOYMENT-ID="udacitycms" WAS-DEFAULT-HOSTNAME="udacitycms-hsggc0fbb9cpfyav.scm.canadacentral-01.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/publish?async=true&amp;deployer=GITHUB_ONE_DEPLOY&amp;type=zip&amp;message=%7B%22type%22%3A%22deployment%22%2C%22sha%22%3A%2264e2af97181378120c150bb782377294ca935540%22%2C%22repoName%22%3A%22danielobiri%2Fudacity-cms-proj%22%2C%22actor%22%3A%22danielobiri%22%2C%22slotName%22%3A%22Production%22%2C%22commitMessage%22%3A%22Fix%20Jinja2%2FMarkupSafe%20compatibility%20and%20reset%20startup%20command%22%7D" X-Client-IP="52.157.2.247" X-Client-Port="54320" >
+  <step title="Cleanup Xml Logs" date="2025-11-06T20:52:25.684" /><!-- duration: 59ms -->
+  <step title="OneDeploy" date="2025-11-06T20:52:26.582" >
+    <step title="None repository commit" date="2025-11-06T20:52:26.693" >
+      <step title="Commit id: b278de2e-e239-4010-999f-d763e64c9352" date="2025-11-06T20:52:26.734" Message="N/A" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 29ms -->
+    </step><!-- duration: 96ms -->
+    <step title="Starting PushDeployAsync" date="2025-11-06T20:52:26.811" /><!-- duration: 24ms -->
+    <step title="Writing artifact to /tmp/zipdeploy/9cce0655-8ee2-4fbf-aafe-117f8a1129c5.zip" date="2025-11-06T20:52:27.005" >
+      <step title="Writing multipart request body to /tmp/zipdeploy/9cce0655-8ee2-4fbf-aafe-117f8a1129c5.zip" date="2025-11-06T20:52:27.012" /><!-- duration: 44ms -->
+    </step><!-- duration: 864ms -->
+    <step title="Removing previous build artifact&apos;s manifest file" date="2025-11-06T20:52:27.947" >
+      <step title="Start deployment in the background" date="2025-11-06T20:52:28.090" >
+        <step title="Acquiring Deployment Lock" date="2025-11-06T20:52:28.191" /><!-- duration: 25ms -->
+        <step title="Acquired Deployment Lock" date="2025-11-06T20:52:28.406" /><!-- duration: 20ms -->
+      </step><!-- duration: 778ms -->
+    </step><!-- duration: 1043ms -->
+    <step title="Outgoing response" date="2025-11-06T20:52:29.105" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 27ms -->
+  </step><!-- duration: 2578ms -->
