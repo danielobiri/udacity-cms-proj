@@ -23,8 +23,9 @@ from FlaskWebProject import app
 if __name__ == '__main__':
     HOST = environ.get('SERVER_HOST', '0.0.0.0')
     try:
-        PORT = int(environ.get('SERVER_PORT', '8000'))
+        # Azure App Service provides PORT environment variable
+        PORT = int(environ.get('PORT', environ.get('SERVER_PORT', '8000')))
     except ValueError:
         PORT = 8000
     # Remove SSL context for Azure App Service
-    app.run(HOST, PORT)
+    app.run(HOST, PORT, debug=False)
