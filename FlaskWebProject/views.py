@@ -78,6 +78,8 @@ def login():
         return redirect(next_page)
     session["state"] = str(uuid.uuid4())
     auth_url = _build_auth_url(scopes=Config.SCOPE, state=session["state"])
+    app.logger.info('Microsoft login URL generated with redirect URI: %s', 
+                    url_for("authorized", _external=True))
     return render_template('login.html', title='Sign In', form=form, auth_url=auth_url)
 
 @app.route(Config.REDIRECT_PATH)  # Its absolute URL must match your app's redirect_uri set in AAD
@@ -99,7 +101,7 @@ def authorized():
         # Note: In a real app, we'd use the 'name' property from session["user"] below
         # Here, we'll use the admin username for anyone who is authenticated by MS
         user = User.query.filter_by(username="admin").first()
-        app.logger.info('User logged in successfully via Microsoft authentication')
+        app.logger.info('User %s logged in successfully via Microsoft authentication',user)
         login_user(user)
         _save_cache(cache)
     return redirect(url_for('home'))
