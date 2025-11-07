@@ -1,3 +1,5 @@
+# Set up SQL query logging
+import logging
 import random
 import string
 from datetime import datetime
@@ -9,6 +11,9 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.utils import secure_filename
 
 from FlaskWebProject import app, db, login
+
+logging.basicConfig()
+logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
 
 blob_container = app.config['BLOB_CONTAINER']
 blob_service = BlobServiceClient(account_url=f"https://{app.config['BLOB_ACCOUNT']}.blob.core.windows.net", credential=app.config['BLOB_STORAGE_KEY'])
@@ -29,11 +34,19 @@ class User(UserMixin, db.Model):
         self.password_hash = generate_password_hash(password)
 
     def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
+        from FlaskWebProject import app
+        app.logger.info('Checking password for user %s with hash %s', self.username, self.password_hash)
+        result = check_password_hash(self.password_hash, password)
+        app.logger.info('Password check result for user %s: %s', self.username, result)
+        return result
 
 @login.user_loader
 def load_user(id):
-    return User.query.get(int(id))
+    from FlaskWebProject import app
+    app.logger.info('Loading user with ID: %s', id)
+    user = User.query.get(int(id))
+    app.logger.info('Load user result: %s', user)
+    return user
 
 class Post(db.Model):
     __tablename__ = 'posts'
