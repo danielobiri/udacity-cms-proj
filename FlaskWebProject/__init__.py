@@ -13,7 +13,6 @@ print('here is config:', Config.BLOB_ACCOUNT)
 print('Flask-SQLAlchemy version check - starting app')
 app = Flask(__name__)
 app.config.from_object(Config)
-# TODO: Add any logging levels and handlers with app.logger
 
 # Configure logging
 if not app.debug:

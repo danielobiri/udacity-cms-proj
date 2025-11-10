@@ -1,4 +1,5 @@
 import os
+
 import dotenv
 
 # load env variables
@@ -27,9 +28,8 @@ class Config(object):
     # such as KeyVault, or environment variable as described in Flask's documentation here:
     # https://flask.palletsprojects.com/en/1.1.x/config/#configuring-from-environment-variables
 
-    # Use tenant-specific endpoint for single-tenant application
-    AUTHORITY = os.environ.get("AUTHORITY") or "https://login.microsoftonline.com/f958e84a-92b8-439f-a62d-4f45996b6d07"
-    # AUTHORITY = "https://login.microsoftonline.com/common"  # For multi-tenant app only
+    # Use common endpoint for multi-tenant application (any Azure AD tenant)
+    AUTHORITY = os.environ.get("AUTHORITY") or "https://login.microsoftonline.com/organizations"
 
     CLIENT_ID = os.environ.get("CLIENT_ID") or "ENTER_CLIENT_ID"
 
@@ -37,6 +37,8 @@ class Config(object):
 
     # You can find the proper permission names from this document
     # https://docs.microsoft.com/en-us/graph/permissions-reference
-    SCOPE = ["User.Read"] # Only need to read user profile for this app
+    # Only need to read user profile for this app
+    # Use .default scope for multi-tenant access
+    SCOPE = ["https://graph.microsoft.com/.default"]
 
     SESSION_TYPE = "filesystem"  # Token cache will be stored in server-side session
