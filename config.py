@@ -28,8 +28,10 @@ class Config(object):
     # such as KeyVault, or environment variable as described in Flask's documentation here:
     # https://flask.palletsprojects.com/en/1.1.x/config/#configuring-from-environment-variables
 
-    # Use common endpoint for multi-tenant application (any Azure AD tenant)
-    AUTHORITY = os.environ.get("AUTHORITY") or "https://login.microsoftonline.com/organizations"
+    # Use tenant-specific endpoint for single-tenant application
+    # AUTHORITY = os.environ.get("AUTHORITY") or "https://login.microsoftonline.com/f958e84a-92b8-439f-a62d-4f45996b6d07"
+    AUTHORITY = os.environ.get("AUTHORITY") or "https://login.microsoftonline.com/common"
+    # AUTHORITY = "https://login.microsoftonline.com/common"  # For multi-tenant app only
 
     CLIENT_ID = os.environ.get("CLIENT_ID") or "ENTER_CLIENT_ID"
 
